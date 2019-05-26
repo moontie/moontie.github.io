@@ -62,6 +62,96 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Git-use-memo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/26/Git-use-memo/" class="article-date">
+  <time datetime="2019-05-26T09:49:04.000Z" itemprop="datePublished">2019-05-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/26/Git-use-memo/">gitʹ��˵��</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<hr>
+<p>title: Gitʹ��<br>date: 2019-05-26 16:05:50</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>###�ο�����</p>
+<p>ʹ��git�󲿷ֵ����ݶ��Ǵ� ��ѩ�����վ��ȡ��,��ȷ�Ƶ����� ʷ����ǳ���׶���Git�̳̣�</p>
+<p><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">��ѩ��Ĺٷ���վ</a></p>
+<p>���Դ˲��������ô�������make.</p>
+<p>###ʹ�������е�Git����Tortoisegit</p>
+<p>��ǰһֱ��TortoisegSVN,����ǰ����Git��ʱ���ѡ����Tortoisegit.<br>��Ȼ����Դ����Ĳ���ϰ����һ��,���ǻ��ǽ������������е� Git,�����ֺ���ת��TortoisegitҲδ������.ԭ�������д����,Ȼ����ʹ��IDE����һ���ȴ�û���.</p>
+<p>###�Թ�����</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git���</span><br><span class="line">��װGit</span><br></pre></td></tr></table></figure>
+<p>###�����汾��<br>һ����������GitHub���������ϴ����汾���ٿ�¡������<br>���ش����汾������(��git Bash��������,���л���ָ��Ŀ¼)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<p>###�����ļ�</p>
+<p>��unit-1.txt����汾����(֧�ֶ��һ������)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git add &lt;file&gt;</span><br><span class="line">ʾ��</span><br><span class="line">$ git add unit-1.txt</span><br><span class="line">$ git add file2.txt file3.txt</span><br></pre></td></tr></table></figure>
+<p>###�޸��ύ(֧�ֶ���ļ�һ������)</p>
+<p>�������ļ�����һ��</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git add &lt;file&gt;</span><br><span class="line">ʾ��</span><br><span class="line">$ git add unit-1.txt</span><br><span class="line">$ git add file2.txt file3.txt</span><br></pre></td></tr></table></figure>
+<p>###�汾�ύ��������</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &quot;�汾�ύ˵��&quot;</span><br></pre></td></tr></table></figure>
+<p>###�汾�ύ��־</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git log</span><br><span class="line">$ git log-pretty=oneline</span><br></pre></td></tr></table></figure>
+<p>###�ļ�����</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<p>###�ļ�ɾ��</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rm &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<p>###�汾����</p>
+<p>SHA1�İ汾�ſ��Բ���ȫ������.ֻ����ǰ�沿��Ҳ����</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard commit_id</span><br></pre></td></tr></table></figure>
+<p>###git������ʷ</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog</span><br></pre></td></tr></table></figure>
+<p>###Ϊ���ؿ�����Զ�̿�</p>
+<p>origin ������ʾԶ�̿�,֧��https��ssh���ַ�ʽ</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin https://gitee.com/soft1000_admin/gitBanBenKongZhiXueXi.git</span><br><span class="line">$ git remote add origin git@gitee.com:soft1000_admin/gitBanBenKongZhiXueXi.git</span><br></pre></td></tr></table></figure>
+<p>###����Զ�̰汾��</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+<p>###���ؿ�¡�汾��</p>
+<p>֧��https��ssh���ַ�ʽ</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git@gitee.com:soft1000_admin/gitBanBenKongZhiXueXi.git</span><br></pre></td></tr></table></figure>
+<p>##��֧����</p>
+<p>###������֧</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch ��֧��</span><br></pre></td></tr></table></figure>
+<p>###����+�л���֧</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b &lt;name&gt;</span><br></pre></td></tr></table></figure>
+<p>###�鿴��ǰ��֧</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></table></figure>
+<p>###�л���֧</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout ��֧��</span><br></pre></td></tr></table></figure>
+<p>###�ϲ��ֻ�</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge ��֧��</span><br></pre></td></tr></table></figure>
+<p>###ɾ����֧</p>
+<p>��Ϊ�������ϲ���ɾ����֧�ǳ��죬����Git������ʹ�÷�֧���ĳ�����񣬺ϲ�����ɾ����֧�����ֱ����master��֧�Ϲ���Ч����һ���ģ������̸���ȫ</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d ��֧��</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://moontie.github.io/2019/05/26/Git-use-memo/" data-id="cjw4rkjf10000qompq9ed9bmt" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-git使用说明" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/26/git使用说明/" class="article-date">
@@ -142,7 +232,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://moontie.github.io/2019/05/26/git使用说明/" data-id="cjw4rhcsp0001esmpgeyv8a02" class="article-share-link">Share</a>
+      <a data-url="https://moontie.github.io/2019/05/26/git使用说明/" data-id="cjw4rkjhx0002qomp2dgcckpd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -251,7 +341,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://moontie.github.io/2019/05/26/git-Hexo-on-Github/" data-id="cjw4rhcsi0000esmppbgh4hj8" class="article-share-link">Share</a>
+      <a data-url="https://moontie.github.io/2019/05/26/git-Hexo-on-Github/" data-id="cjw4rkjhv0001qomp3qd9t2ih" class="article-share-link">Share</a>
       
       
     </footer>
@@ -290,6 +380,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/05/26/Git-use-memo/">gitʹ��˵��</a>
+          </li>
         
           <li>
             <a href="/2019/05/26/git使用说明/">git使用说明</a>

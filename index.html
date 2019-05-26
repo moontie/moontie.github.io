@@ -142,97 +142,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://moontie.github.io/2019/05/26/Git-use-memo/" data-id="cjw4rmjmq000058mporvljgxu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-git使用说明" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/26/git使用说明/" class="article-date">
-  <time datetime="2019-05-26T09:49:04.000Z" itemprop="datePublished">2019-05-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/26/git使用说明/">git使用说明</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>[TOC]</p>
-<hr>
-<p>title: Git使用<br>date: 2019-05-26 16:05:50</p>
-<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>###参考文献</p>
-<p>使用git大部分的内容都是从 廖雪峰的网站获取的,的确称得上是 史上最浅显易懂的Git教程！</p>
-<p><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰的官方网站</a></p>
-<p>所以此博文最大的用处是做个make.</p>
-<p>###使用命令行的Git还是Tortoisegit</p>
-<p>以前一直用TortoisegSVN,所以前期用Git的时候就选择了Tortoisegit.<br>虽然这个自带中文操作习惯又一致,但是还是建议掌握命令行的 Git,等上手后再转回Tortoisegit也未尝不可.原因和先手写代码,然后再使用IDE和类一样先打好基础.</p>
-<p>###略过部分</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git简介</span><br><span class="line">安装Git</span><br></pre></td></tr></table></figure>
-<p>###创建版本库<br>一般我们是在GitHub或者码云上创建版本库再克隆到本地<br>本地创建版本库命令(在git Bash命令行下,先切换到指定目录)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
-<p>###添加文件</p>
-<p>将unit-1.txt纳入版本管理(支持多个一并添加)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git add &lt;file&gt;</span><br><span class="line">示例</span><br><span class="line">$ git add unit-1.txt</span><br><span class="line">$ git add file2.txt file3.txt</span><br></pre></td></tr></table></figure>
-<p>###修改提交(支持多个文件一并处理)</p>
-<p>和添加文件命令一致</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git add &lt;file&gt;</span><br><span class="line">示例</span><br><span class="line">$ git add unit-1.txt</span><br><span class="line">$ git add file2.txt file3.txt</span><br></pre></td></tr></table></figure>
-<p>###版本提交至缓存区</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &quot;版本提交说明&quot;</span><br></pre></td></tr></table></figure>
-<p>###版本提交日志</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git log</span><br><span class="line">$ git log-pretty=oneline</span><br></pre></td></tr></table></figure>
-<p>###文件回退</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-<p>###文件删除</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rm &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-<p>###版本回退</p>
-<p>SHA1的版本号可以不用全部输入.只输入前面部分也可以</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard commit_id</span><br></pre></td></tr></table></figure>
-<p>###git命令历史</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog</span><br></pre></td></tr></table></figure>
-<p>###为本地库添加远程库</p>
-<p>origin 用来表示远程库,支持https和ssh两种方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin https://gitee.com/soft1000_admin/gitBanBenKongZhiXueXi.git</span><br><span class="line">$ git remote add origin git@gitee.com:soft1000_admin/gitBanBenKongZhiXueXi.git</span><br></pre></td></tr></table></figure>
-<p>###推送远程版本库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
-<p>###本地克隆版本库</p>
-<p>支持https和ssh两种方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git@gitee.com:soft1000_admin/gitBanBenKongZhiXueXi.git</span><br></pre></td></tr></table></figure>
-<p>##分支管理</p>
-<p>###创建分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch 分支名</span><br></pre></td></tr></table></figure>
-<p>###创建+切换分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b &lt;name&gt;</span><br></pre></td></tr></table></figure>
-<p>###查看当前分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></table></figure>
-<p>###切换分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout 分支名</span><br></pre></td></tr></table></figure>
-<p>###合并分会</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge 分支名</span><br></pre></td></tr></table></figure>
-<p>###删除分支</p>
-<p>因为创建、合并和删除分支非常快，所以Git鼓励你使用分支完成某个任务，合并后再删掉分支，这和直接在master分支上工作效果是一样的，但过程更安全</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d 分支名</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://moontie.github.io/2019/05/26/git使用说明/" data-id="cjw4rmjng000358mp18q2olra" class="article-share-link">Share</a>
+      <a data-url="https://moontie.github.io/2019/05/26/Git-use-memo/" data-id="cjw4rtsp40000y4mpiuxn6pv0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -341,7 +251,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://moontie.github.io/2019/05/26/git-Hexo-on-Github/" data-id="cjw4rmjmx000158mpltxbll8e" class="article-share-link">Share</a>
+      <a data-url="https://moontie.github.io/2019/05/26/git-Hexo-on-Github/" data-id="cjw4rtspc0001y4mpfijn8fuk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -383,10 +293,6 @@
         
           <li>
             <a href="/2019/05/26/Git-use-memo/">gitʹ��˵��</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/26/git使用说明/">git使用说明</a>
           </li>
         
           <li>

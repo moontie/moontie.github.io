@@ -76,7 +76,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/31/add-Git-Bash-to-Right-click/">���� Git Bash ���Ҽ��˵�</a>
+      <a class="article-title" href="/2019/05/31/add-Git-Bash-to-Right-click/">添加 Git Bash 到右键菜单</a>
     </h1>
   
 
@@ -84,13 +84,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>��Ϊ��ǰʹ�ù����������Ҽ��˵�,�����Ҽ�û����Git Bash<br>û������Ҽ��˵����±༭Hexo�ȵ�ʱ���л�·���ܲ����㣬���Խ�����˵��ӳ�����</p>
-<p>1��win + R�����롰regedit�����س���ע�����<br>2���ҵ� [HKEY_CLASSES_ROOT\Directory\Background]��<br>3���� [Background] �����û�� [shell]�����Ҽ�-�½��� [shell]��<br>4���� [shell] ���Ҽ�-�½���[Git Bash Here]����Ϊ�Ҽ��˵���ʾ���ƣ�<br>5���� [Git Bash Here] ���Ҽ�-�½�-�ַ���ֵ[Icon],˫���༭����ֵΪ��E:\Git\mingw32\share\git\git-for-windows.ico������Ϊ�˵���ͼ�꣬��E:\Git��Ϊ��װ·����<br>6���� [Git Bash Here] ���Ҽ�-�½�-��[command],�޸�Ĭ��ֵΪ “E:\Git\git-bash.exe”��</p>
+        <p>因为以前使用工具清理过右键菜单,现在右键没有了Git Bash<br>没有这个右键菜单导致编辑Hexo等的时候切换路径很不方便，所以将这个菜单加出来。</p>
+<p>1、win + R，输入“regedit”，回车打开注册表；<br>2、找到 [HKEY_CLASSES_ROOT\Directory\Background]；<br>3、在 [Background] 下如果没有 [shell]，则右键-新建项 [shell]；<br>4、在 [shell] 下右键-新建项[Git Bash Here]，此为右键菜单显示名称；<br>5、在 [Git Bash Here] 下右键-新建-字符串值[Icon],双击编辑，其值为“E:\Git\mingw32\share\git\git-for-windows.ico”。此为菜单加图标，“E:\Git”为安装路径。<br>6、在 [Git Bash Here] 下右键-新建-项[command],修改默认值为 “E:\Git\git-bash.exe”。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://moontie.github.io/2019/05/31/add-Git-Bash-to-Right-click/" data-id="cjwbskd5j0000fompi1r2402g" class="article-share-link">Share</a>
+      <a data-url="https://moontie.github.io/2019/05/31/add-Git-Bash-to-Right-click/" data-id="cjwbsmwhp0000jkmpyhdn2up2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -182,7 +182,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://moontie.github.io/2019/05/26/git使用说明/" data-id="cjwbskd8a0001fompl9dzj0k2" class="article-share-link">Share</a>
+      <a data-url="https://moontie.github.io/2019/05/26/git使用说明/" data-id="cjwbsmwhz0002jkmpx2vss6sq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -291,7 +291,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://moontie.github.io/2019/05/26/git-Hexo-on-Github/" data-id="cjwbskd8q0002fomp0pjoxk96" class="article-share-link">Share</a>
+      <a data-url="https://moontie.github.io/2019/05/26/git-Hexo-on-Github/" data-id="cjwbsmwhw0001jkmp8vv3v9f0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -332,7 +332,7 @@
       <ul>
         
           <li>
-            <a href="/2019/05/31/add-Git-Bash-to-Right-click/">���� Git Bash ���Ҽ��˵�</a>
+            <a href="/2019/05/31/add-Git-Bash-to-Right-click/">添加 Git Bash 到右键菜单</a>
           </li>
         
           <li>

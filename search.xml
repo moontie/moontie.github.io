@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[oracle 动态调用存储过程]]></title>
+    <url>%2F2019%2F06%2F11%2Foracle-dynamic-procedures%2F</url>
+    <content type="text"><![CDATA[统一入参,业务逻辑均在oralce后台包和存储过程 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788type声明 CREATE OR REPLACE TYPE &quot;TYPE_TRANS_PARMS&quot; as object ( transcode varchar2(50), --交易代码 transid varchar2(50), --交易流水号 transkey varchar2(50), --系统授权码 transusr varchar2(50), --操 作员 transdev varchar2(50), --设备编码 transhsp varchar2(50), --医院编码 transcmd varchar2(50), --医院编码 transparm type_inparm_array, --交易参数 extraparm1 type_inparm_array, --附加参数1 extraparm2 type_inparm_array --附加参数2 ); --type声明CREATE OR REPLACE TYPE &quot;TYPE_INPARM_ARRAY&quot; declare ll_return pls_integer; ll_count pls_integer; ls_errmsg varchar2(4000); ls_sqlcmd varchar2(4000); ls_trade_no varchar2(100); ls_trade_code varchar2(100); ls_sick_id varchar2(100); ls_parm_in varchar2(4000); g_trans_parms type_trans_parms; arr_in_parm type_inparm_array := type_inparm_array(); extraparm1 type_inparm_array := type_inparm_array(); extraparm2 type_inparm_array := type_inparm_array(); rc_result sys_refcursor; ls_errmsg varchar2(50); ls_trans_no varchar2(50); ls_trans_id varchar2(50); ls_trans_key varchar2(50); ls_trans_usr varchar2(50); ls_trans_dev varchar2(50); ls_trans_hsp varchar2(50); ls_trans_cmd varchar2(50); ls_intrerface varchar2(50); rs_message varchar2(50); begin --interface_common.of_5005 select nvl(cmdtext, &apos;&apos;) into ls_trans_cmd from comm.interface_request_dict where interface = &apos;fdrx&apos; and trade_code = &apos;5005&apos; and valid = &apos;Y&apos;; ls_trans_no := &apos;ls_trans_no&apos;; ls_trans_id := &apos;ls_trans_id&apos;; ls_trans_key := &apos;ls_trans_key&apos;; ls_trans_usr := &apos;ls_trans_usr&apos;; ls_trans_dev := &apos;ls_trans_dev&apos;; ls_trans_hsp := &apos;ls_trans_hsp&apos;; ll_count := 0; while ll_count &lt; 10 loop arr_in_parm.extend; arr_in_parm(arr_in_parm.count) := ll_count; ll_count := ll_count + 1; end loop; g_trans_parms := type_trans_parms(transcode =&gt; ls_trans_no, transid =&gt; ls_trans_id, transkey =&gt; ls_trans_key, transusr =&gt; ls_trans_usr, transdev =&gt; ls_trans_dev, transhsp =&gt; ls_trans_hsp, transcmd =&gt; ls_trans_cmd, transparm =&gt; arr_in_parm, extraparm1 =&gt; extraparm1, extraparm2 =&gt; extraparm2); ls_sqlcmd := lower(g_trans_parms.transcmd); ls_sqlcmd := &apos;begin :1 := &apos; || ls_sqlcmd || &apos;(:2,:3,:4); end;&apos;; execute immediate ls_sqlcmd using out ll_return, in g_trans_parms, in out rs_message, in out rc_result; dbms_output.put_line(rs_message); end;]]></content>
+      <categories>
+        <category>oracle</category>
+      </categories>
+      <tags>
+        <tag>oracle</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[添加 Git Bash 到右键菜单]]></title>
     <url>%2F2019%2F05%2F31%2Fadd-Git-Bash-to-Right-click%2F</url>
     <content type="text"><![CDATA[因为以前使用工具清理过右键菜单,现在右键没有了Git Bash没有这个右键菜单导致编辑Hexo等的时候切换路径很不方便，所以将这个菜单加出来。 1、win + R，输入“regedit”，回车打开注册表；2、找到 [HKEY_CLASSES_ROOT\Directory\Background]；3、在 [Background] 下如果没有 [shell]，则右键-新建项 [shell]；4、在 [shell] 下右键-新建项[Git Bash Here]，此为右键菜单显示名称；5、在 [Git Bash Here] 下右键-新建-字符串值[Icon],双击编辑，其值为“E:\Git\mingw32\share\git\git-for-windows.ico”。此为菜单加图标，“E:\Git”为安装路径。6、在 [Git Bash Here] 下右键-新建-项[command],修改默认值为 “E:\Git\git-bash.exe”。]]></content>
